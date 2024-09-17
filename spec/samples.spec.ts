@@ -1,5 +1,12 @@
 import { someNumbers, allNumbers, someAsyncNumbers, allAsyncNumbers } from '$lib/samples'
 
+/*
+  Note that I am fully aware that the following tests aren't actually
+  asserting anything. I just needed an easy way to invoke the functions so
+  that I would have some code for my video. And, I figured you might find
+  them useful too.
+*/
+
 describe('#someNumbers', () => {
   test('that values can be accessed using .next()', () => {
     const generator = someNumbers()
