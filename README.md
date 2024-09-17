@@ -1,6 +1,6 @@
 # TypeScript, async generators, and Redis search
 
-The repository has some sample code showing you have to use async generators in combination with Redis search.
+The repository has some sample code showing you have to use generators, async generatros, and how to use them in combination with Redis search. I made this as part of a video talking about the same topic.
 
 ## Getting Started
 
