@@ -82,7 +82,7 @@ export async function* fetchBigfootSightings(query: string): BigfootSightingGene
     }
 
     /* Prepare for the next page. */
-    hasMore = result.total >= offset
+    hasMore = result.total > offset
     offset += PAGE_SIZE
   }
 }
@@ -109,6 +109,6 @@ export function fetchByCountyAndState(county: string, state: string): BigfootSig
   return fetchBigfootSightings(`@county:${county} @state:${state}`)
 }
 
-export function fetchByLocation(longitude: number, latitude: number, radisInMiles: number): BigfootSightingGenerator {
-  return fetchBigfootSightings(`@lnglat:[${longitude} ${latitude} ${radisInMiles} mi]`)
+export function fetchByLocation(longitude: number, latitude: number, radiusInMiles: number): BigfootSightingGenerator {
+  return fetchBigfootSightings(`@lnglat:[${longitude} ${latitude} ${radiusInMiles} mi]`)
 }
